@@ -23,13 +23,17 @@
       display: flex;
       animation: scroll 20s linear infinite;
       gap: 0;
-      /* Removed padding */
       align-items: center;
+      font-size: 0;       /* Remove inline spacing */
+      line-height: 0;     /* Remove inline spacing */
+      height: 200px;      /* Exactly image height */
+      overflow: hidden;
     }
     .carousel img {
       height: 200px;
       border-radius: 0;
-      display: block; /* avoid inline gaps */
+      display: block;     /* avoid inline gaps */
+      vertical-align: top; /* remove descender gap */
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
