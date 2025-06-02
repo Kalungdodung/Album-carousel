@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Album Carousel</title>
   <style>
-    body {
-      background: #111;
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      background: #111;
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     .carousel {
       display: flex;
