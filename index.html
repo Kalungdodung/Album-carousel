@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Album Carousel</title>
+  <style>
+    body {
+      background: #111;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel {
+      display: flex;
+      animation: scroll 20s linear infinite;
+      gap: 20px;
+      padding: 20px;
+      align-items: center;
+    }
+    .carousel img {
+      height: 200px;
+      border-radius: 12px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <img src="rosie.png">
+    <img src="lauv1.png">
+    <img src="lauv-logo.png">
+    <img src="rosie.png">
+    <img src="lauv1.png">
+    <img src="lauv-logo.png">
+  </div>
+</body>
+</html>
