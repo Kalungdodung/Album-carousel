@@ -3,50 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Album Carousel</title>
+  <title>Infinite Album Carousel</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background: #111;
-      overflow-x: hidden;
-      overflow-y: hidden; /* Prevent vertical scrollbar */
+      overflow: hidden;
     }
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
-    .carousel {
-      display: flex;
-      animation: scroll 20s linear infinite;
-      gap: 0;
-      align-items: center;
-      font-size: 0;       /* Remove inline spacing */
-      line-height: 0;     /* Remove inline spacing */
-      height: 200px;      /* Exactly image height */
+
+    .carousel-wrapper {
+      width: 100%;
       overflow: hidden;
     }
+
+    .carousel {
+      display: flex;
+      animation: scroll 30s linear infinite;
+    }
+
     .carousel img {
       height: 200px;
-      border-radius: 0;
-      display: block;     /* avoid inline gaps */
-      vertical-align: top; /* remove descender gap */
+      display: block;
+      vertical-align: top;
     }
+
     @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="carousel">
-    <img src="rosie.png" />
-    <img src="lauv1.png" />
-    <img src="rosie.png" />
-    <img src="lauv1.png" />
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      <img src="rosie.png" />
+      <img src="lauv1.png" />
+      <img src="rosie.png" />
+      <img src="lauv1.png" />
+      <!-- Duplicate set for infinite loop -->
+      <img src="rosie.png" />
+      <img src="lauv1.png" />
+      <img src="rosie.png" />
+      <img src="lauv1.png" />
+    </div>
   </div>
 </body>
 </html>
