@@ -11,6 +11,7 @@
       height: 100%;
       background: #111;
       overflow-x: hidden;
+      overflow-y: hidden; /* Prevent vertical scrollbar */
     }
     body {
       display: flex;
@@ -22,12 +23,13 @@
       display: flex;
       animation: scroll 20s linear infinite;
       gap: 0;
-      padding: 20px;
+      /* Removed padding */
       align-items: center;
     }
     .carousel img {
       height: 200px;
-      border-radius: 0; /* square corners */
+      border-radius: 0;
+      display: block; /* avoid inline gaps */
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
